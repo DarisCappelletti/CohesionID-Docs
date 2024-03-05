@@ -1,0 +1,41 @@
+site_name: CohesionID-Docs
+
+theme:
+  name: material
+  language: it
+  custom_dir: Custom/overrides
+  features:
+    - announce.dismiss
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra:
+  generator: false
+
+extra_javascript:
+  - 'docs/_Footer.md'
+  - 'docs/_Sidebar.md'
+
+plugins:
+  - include_dir_to_nav:
+      file_name_as_title: true
+      sort_file: true
+      sort_directory: true
+      recurse: true
+      reverse_sort_directory: true
+
+markdown_extensions:
+  - admonition
+  - codehilite
+
+docs_dir: docs
+site_dir: site
