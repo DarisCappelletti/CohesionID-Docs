@@ -67,7 +67,7 @@ Di seguito verranno descritti i campi che è possibile cambiare:
 * **site.IndexURL**: se presente deve contenere l’url della propria pagina a cui ritornare in caso di errore di autenticazione.
 * **sso.additionalData**: Deve contenere obbligatoriamente il percorso completo della propria pagina di logout affinché il logout SAML funzioni correttamente. Può contenere altri due parametri opzionali: i livelli di autenticazione da mostrare (parametro AuthRestriction) e un flag per mostrare solo i meccanismi di accesso federato SPID, CIEID, CNS e l'accesso tramite dominio. I vari parametri vanno separati da punto e virgola ";".
 
-Per approfondimenti in merito alla configurazione dei parametri addizionali, è possibile far riferimento alla pagina [Parametri della Richiesta di Autenticazione](https://github.com/BianchettiMichele/Integra-Cohesion/wiki/Parametri-della-Richiesta-di-Autenticazione)
+Per approfondimenti in merito alla configurazione dei parametri addizionali, è possibile far riferimento alla pagina [Parametri della Richiesta di Autenticazione](/CohesionID-Docs/Parametri-della-Richiesta-di-Autenticazione)
 
 > [Opzionale]
 
