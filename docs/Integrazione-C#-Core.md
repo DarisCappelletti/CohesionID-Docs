@@ -42,7 +42,9 @@ verifica se la richiesta di login a cohesion ha avuto esito positivo o negativo 
 ## appsettings.json
 
 Nel file appsettings.json è necessario impostare dei valori per il corretto funzionamento dell'autenticazione tramite cohesion.
+
 > In particolare andranno impostate le seguenti chiavi:
+
 *  **sso.check.url** : parametro fisso della pagina SSO di Cohesion.
 *  **webCheckSessionSSO** : parametro fisso della pagina di recupero token di autenticazione.
 *  **sso.additionalData** : parametri opzionali di autenticazione.
