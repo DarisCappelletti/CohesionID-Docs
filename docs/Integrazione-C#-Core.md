@@ -65,6 +65,7 @@ Esempio di codice di configurazione in **appsettings.json**:
 ```
 
 Di seguito verranno descritti i campi che è possibile cambiare:
+
 * **site.URLLogout**: Contiene l’url della pagina di Logout dalla posizione della pagina autenticata. A differenza della modalità classica non è però possibile cambiare il parametro ReturnUrl in quanto strettamente dipendente alle funzionalità di logout di SAML.
 * **site.IndexURL**: se presente deve contenere l’url della propria pagina a cui ritornare in caso di errore di autenticazione.
 * **sso.additionalData**: Deve contenere obbligatoriamente il percorso completo della propria pagina di logout affinché il logout SAML funzioni correttamente. Può contenere altri due parametri opzionali: i livelli di autenticazione da mostrare (parametro AuthRestriction) e un flag per mostrare solo i meccanismi di accesso federato SPID, CIEID, CNS e l'accesso tramite dominio. I vari parametri vanno separati da punto e virgola ";".
@@ -75,6 +76,7 @@ Per approfondimenti in merito alla configurazione dei parametri addizionali, è 
 > [Opzionale]
 
 Prima dell'URL di logout è possibile inserire la stringa AuthRestricion=0,1,2,3 dove i valori 0,1,2,3 indicano i livelli di autenticazione da mostrare nella pagina di login dell’Idp federato selezionato, in particolare:
+
 * 0 indica di mostrare l'autenticazione SAML "Password"
 * 1 indica di mostrare l'autenticazione SAML "Smartcard"
 * 2 indica di mostrare l'autenticazione SAML "SmartcardPKI"
