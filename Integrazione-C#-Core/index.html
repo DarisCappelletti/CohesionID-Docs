@@ -696,19 +696,23 @@ Nella repo della demo sono indicati i requisiti ed i passaggi da eseguire per in
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 
-<p>Di seguito verranno descritti i campi che è possibile cambiare:
-* <strong>site.URLLogout</strong>: Contiene l’url della pagina di Logout dalla posizione della pagina autenticata. A differenza della modalità classica non è però possibile cambiare il parametro ReturnUrl in quanto strettamente dipendente alle funzionalità di logout di SAML.
-* <strong>site.IndexURL</strong>: se presente deve contenere l’url della propria pagina a cui ritornare in caso di errore di autenticazione.
-* <strong>sso.additionalData</strong>: Deve contenere obbligatoriamente il percorso completo della propria pagina di logout affinché il logout SAML funzioni correttamente. Può contenere altri due parametri opzionali: i livelli di autenticazione da mostrare (parametro AuthRestriction) e un flag per mostrare solo i meccanismi di accesso federato SPID, CIEID, CNS e l'accesso tramite dominio. I vari parametri vanno separati da punto e virgola ";".</p>
+<p>Di seguito verranno descritti i campi che è possibile cambiare:</p>
+<ul>
+<li><strong>site.URLLogout</strong>: Contiene l’url della pagina di Logout dalla posizione della pagina autenticata. A differenza della modalità classica non è però possibile cambiare il parametro ReturnUrl in quanto strettamente dipendente alle funzionalità di logout di SAML.</li>
+<li><strong>site.IndexURL</strong>: se presente deve contenere l’url della propria pagina a cui ritornare in caso di errore di autenticazione.</li>
+<li><strong>sso.additionalData</strong>: Deve contenere obbligatoriamente il percorso completo della propria pagina di logout affinché il logout SAML funzioni correttamente. Può contenere altri due parametri opzionali: i livelli di autenticazione da mostrare (parametro AuthRestriction) e un flag per mostrare solo i meccanismi di accesso federato SPID, CIEID, CNS e l'accesso tramite dominio. I vari parametri vanno separati da punto e virgola ";".</li>
+</ul>
 <p>Per approfondimenti in merito alla configurazione dei parametri addizionali, è possibile far riferimento alla pagina <a href="/CohesionID-Docs/Parametri-della-Richiesta-di-Autenticazione">Parametri della Richiesta di Autenticazione</a></p>
 <blockquote>
 <p>[Opzionale]</p>
 </blockquote>
-<p>Prima dell'URL di logout è possibile inserire la stringa AuthRestricion=0,1,2,3 dove i valori 0,1,2,3 indicano i livelli di autenticazione da mostrare nella pagina di login dell’Idp federato selezionato, in particolare:
-* 0 indica di mostrare l'autenticazione SAML "Password"
-* 1 indica di mostrare l'autenticazione SAML "Smartcard"
-* 2 indica di mostrare l'autenticazione SAML "SmartcardPKI"
-* 3 indica di mostrare l'autenticazione SAML "Kerberos"</p>
+<p>Prima dell'URL di logout è possibile inserire la stringa AuthRestricion=0,1,2,3 dove i valori 0,1,2,3 indicano i livelli di autenticazione da mostrare nella pagina di login dell’Idp federato selezionato, in particolare:</p>
+<ul>
+<li>0 indica di mostrare l'autenticazione SAML "Password"</li>
+<li>1 indica di mostrare l'autenticazione SAML "Smartcard"</li>
+<li>2 indica di mostrare l'autenticazione SAML "SmartcardPKI"</li>
+<li>3 indica di mostrare l'autenticazione SAML "Kerberos"</li>
+</ul>
 <p>I seguenti valori sono standard SAML e dovrebbero essere riconosciuti per ogni IdP federato selezionato. Nel caso venga scelto Cohesion come Idp allora i valori saranno interpretati con le modalità di autenticazione già descritte nel punto a), a meno che non venga specificato l'altro parametro opzionale UType=c. E’ possibile nascondere o visualizzare le modalità di autenticazione togliendo o aggiungendo i rispettivi valori separati da una virgola. L’ordine non è influente.</p>
 <blockquote>
 <p>[Opzionale]</p>
