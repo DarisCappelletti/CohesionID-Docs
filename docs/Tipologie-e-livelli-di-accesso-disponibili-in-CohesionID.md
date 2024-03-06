@@ -8,8 +8,9 @@
 | cf+psw    |L1       |LoA2   |PW                   |cohesion2.regione.marche.it:idp                                       |Uguale al precedente|urn:oasis:names:tc:SAML:2.0:ac:classes:**Password**
 | cf+psw+pin|L2       |LoA3   |PIN                  |cohesion2.regione.marche.it:idp                                       |Uguale al precedente|urn:oasis:names:tc:SAML:2.0:ac:classes:**Smartcard**
 | cf+psw+otp|L2       |LoA3   |PIN                  |cohesion2.regione.marche.it:idp                                       |Uguale al precedente|urn:oasis:names:tc:SAML:2.0:ac:classes:Smartcard
-| DOMINIO   |L1       |LoA2   | DRM                 |cohesion2.regione.marche.it:idp                                       |Uguale al precedente|urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos
-
+| DOMINIO   |L1       |LoA2   |DRM                 |cohesion2.regione.marche.it:idp                                       |Uguale al precedente|urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos
+| CNS       |L2      |LoA3    |CF                  |cohesion2.regione.marche.it:sp |Uguale al precedente|urn:oasis:names:tc:SAML:2.0:ac:classes:SmartcardPKI |
+|eIDAS     |L1/2/3   |LoA2/3/4| CF                 |https://sp-proxy.pre.eid.gov.it/spproxy/idpit|Uguale al precedente|https://www.spid.gov.it/SpidL1-2-3 |
 
 
 
