@@ -675,14 +675,16 @@ Nella repo della demo sono indicati i requisiti ed i passaggi da eseguire per in
 <h2 id="appsettingsjson">appsettings.json</h2>
 <p>Nel file appsettings.json è necessario impostare dei valori per il corretto funzionamento dell'autenticazione tramite cohesion.</p>
 <blockquote>
-<p>In particolare andranno impostate le seguenti chiavi:
-*  <strong>sso.check.url</strong> : parametro fisso della pagina SSO di Cohesion.
-*  <strong>webCheckSessionSSO</strong> : parametro fisso della pagina di recupero token di autenticazione.
-*  <strong>sso.additionalData</strong> : parametri opzionali di autenticazione.
-*  <strong>site.URLLogout</strong> : url della propria pagina di logout relativo alla posizione della pagina protetta; è possibile specificare il parametro ReturnUrl con l'url della pagina a cui ritornare una volta effettuato il logout.
-*  <strong>site.id_sito</strong>: IDSito fornito da Regione Marche la momento della abilitazione alla integrazione cohesion.
-*  <strong>site.IndexURL</strong>: url della propria pagina a cui ritornare in caso di errore di autenticazione.</p>
+<p>In particolare andranno impostate le seguenti chiavi:</p>
 </blockquote>
+<ul>
+<li><strong>sso.check.url</strong> : parametro fisso della pagina SSO di Cohesion.</li>
+<li><strong>webCheckSessionSSO</strong> : parametro fisso della pagina di recupero token di autenticazione.</li>
+<li><strong>sso.additionalData</strong> : parametri opzionali di autenticazione.</li>
+<li><strong>site.URLLogout</strong> : url della propria pagina di logout relativo alla posizione della pagina protetta; è possibile specificare il parametro ReturnUrl con l'url della pagina a cui ritornare una volta effettuato il logout.</li>
+<li><strong>site.id_sito</strong>: IDSito fornito da Regione Marche la momento della abilitazione alla integrazione cohesion.</li>
+<li><strong>site.IndexURL</strong>: url della propria pagina a cui ritornare in caso di errore di autenticazione.</li>
+</ul>
 <p>Esempio di codice di configurazione in <strong>appsettings.json</strong>:</p>
 <div class="codehilite"><pre><span></span><code><span class="s">&quot;AppSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="s">&quot;SSOcheckUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://cohesion2.regione.marche.it/SPManager/WAYF.aspx&quot;</span><span class="p">,</span>
