@@ -567,17 +567,25 @@ Verrà in dettaglio descritta la procedura di installazione in ambiente Java Ser
 <p><strong><a href="https://cohesion.regione.marche.it/cohesioninformativo/Portals/0/Keystore_java.zip">Scarica il keystore valido a partire dal 16/02/2022</a></strong></p>
 </blockquote>
 <hr />
-<p><strong>Prerequisiti</strong>:
-* Apache Tomcat v6+, JBoss, Glassfish
-* Java v 1.6+</p>
+<p><strong>Prerequisiti</strong>:</p>
+<ul>
+<li>Apache Tomcat v6+, JBoss, Glassfish</li>
+<li>Java v 1.6+</li>
+</ul>
 <p>La servlet per l’integrazione di Cohesion è stata riscritta in modo da essere compatibile anche con qualunque servlet container e non utilizzare librerie esterne e componenti aggiuntivi che ne potrebbero limitare la compatibilità.</p>
 <p>Inoltre è stato aggiunto il supporto alla funzionalità di logout, prima assente. Abbiamo quindi la servlet “Authentication” che fornisce Single Sign On e la servlet “Logout” che effettua il logout da Cohesion. Usando questo pacchetto, Cohesion potrà essere integrato in ogni tipologia di sito a prescindere dal linguaggio di progettazione (volendo anche in un sito .NET su IIS).</p>
 <p>Una volta configurata la servlet e lanciato l’ambiente Tomcat infatti, sarà sufficiente creare nel proprio sito una pagina di login che rediriga alla pagina servlet “Authentication” specificando il parametro ReturnUrl, che dovrà contenere l’url della pagina a cui la servlet ritornerà il token utente. Tale pagina può essere la stessa pagina di login, l’importante è che sia in grado di processare il token utente ricevuto via POST. Il token è firmato, eventualmente crittografato, e codificato in base64, perciò la pagina di login dovrà riuscire a decodificare la stringa base64, eventualmente decriptare il token mediante la chiave impostata nella servlet (l’algoritmo utilizzato è il 3-DES/ECB/NoPadding), ed infine volendo, verificare la firma del token Quest’ultimo passaggio in realtà non è strettamente necessario ai fini della sicurezza qualora la connessione ai server Cohesion sia fatta in HTTPS. Questo perché la servlet controlla automaticamente che il certificato SSL della pagina corrisponda effettivamente al nome DNS usato, e in caso negativo ritorna una notifica. Solo dopo questi passaggi si potrà autenticare l’utente ed aggiungere il token nella propria sessione.</p>
 <p>Nel pacchetto vengono fornite due pagine login di esempio; una sviluppata in JSP ed un'altra in PHP, insieme al certificato Cohesion necessario a verificare la firma digitale del token.</p>
 <p>Per effettuare il logout è invece sufficiente creare una pagina di logout che rediriga alla servlet “Logout”. È possibile anche in questo caso specificare il parametro ReturnUrl che sarà l’indirizzo a cui la servlet ridirigerà l’utente una volta effettuata la disconnessione da Cohesion. Nel pacchetto vengono fornite oltre alle pagine di login anche due semplici pagine di logout, una in JSP ed una in PHP.</p>
-<p><em>Di seguito verranno elencate le operazioni di configurazione da effettuare</em>:
-1. Effettuare il deploy del WAR: Nel caso di Apache Tomcat come servlet container, copiare il file CohesionServlet.war dentro la cartella webapp e lanciare Tomcat in modo da effettuare automaticamente il deploy della servlet. Nel caso Tomcat sia configurato per non effettuare il deploy automatico è sufficiente scompattare il file .war (è un archivio zip) nella cartella webapp/CohesionServlet.
-2. Importare i certificati CA della Regione Marche presenti nel keystore RegioneMarcheCA.keystore, nel keystore interno di java mediante il comando:</p>
+<p><em>Di seguito verranno elencate le operazioni di configurazione da effettuare</em>:</p>
+<ol>
+<li>
+<p>Effettuare il deploy del WAR: Nel caso di Apache Tomcat come servlet container, copiare il file CohesionServlet.war dentro la cartella webapp e lanciare Tomcat in modo da effettuare automaticamente il deploy della servlet. Nel caso Tomcat sia configurato per non effettuare il deploy automatico è sufficiente scompattare il file .war (è un archivio zip) nella cartella webapp/CohesionServlet.</p>
+</li>
+<li>
+<p>Importare i certificati CA della Regione Marche presenti nel keystore RegioneMarcheCA.keystore, nel keystore interno di java mediante il comando:</p>
+</li>
+</ol>
 <div class="codehilite"><pre><span></span><code><span class="n">keytool</span><span class="w"> </span><span class="o">-</span><span class="n">importkeystore</span><span class="w"> </span><span class="o">-</span><span class="n">srckeystore</span><span class="w"> </span><span class="n">RegioneMarcheCA</span><span class="p">.</span><span class="na">keystore</span>
 </code></pre></div>
 
@@ -597,12 +605,14 @@ I parametri da aggiungere alla variabile di sistema JAVA_OPTS comunemente usata 
 </li>
 </ol>
 <p><strong>a) Parametri relativi al certificato</strong>
-Qualora fosse stato rilasciato un certificato personale insieme alla servlet, questi parametri andranno obbligatoriamente cambiati in quanto sono specifici per il singolo certificato utente e sono presenti sia per la servlet di autenticazione che per quella di logout:
-* <strong>keystorePath</strong>: Inserire il percorso del certificato personale del punto 3).
-* <strong>keystoreType</strong>: Se il file è un .p12 o un .pfx rinominato in .p12 lasciare il valore PKCS12.
-* <strong>pwdKeystore</strong>: La password che protegge il certificato
-* <strong>pwdCertificate</strong>: La password che protegge la chiave privata. Solitamente è uguale a pwdKeystore
-* <strong>aliasCertificate</strong>: L'alias del certificato. Per visualizzarlo utilizzare il comando:</p>
+Qualora fosse stato rilasciato un certificato personale insieme alla servlet, questi parametri andranno obbligatoriamente cambiati in quanto sono specifici per il singolo certificato utente e sono presenti sia per la servlet di autenticazione che per quella di logout:</p>
+<ul>
+<li><strong>keystorePath</strong>: Inserire il percorso del certificato personale del punto 3).</li>
+<li><strong>keystoreType</strong>: Se il file è un .p12 o un .pfx rinominato in .p12 lasciare il valore PKCS12.</li>
+<li><strong>pwdKeystore</strong>: La password che protegge il certificato</li>
+<li><strong>pwdCertificate</strong>: La password che protegge la chiave privata. Solitamente è uguale a pwdKeystore</li>
+<li><strong>aliasCertificate</strong>: L'alias del certificato. Per visualizzarlo utilizzare il comando:</li>
+</ul>
 <div class="codehilite"><pre><span></span><code><span class="n">keytool</span><span class="w"> </span><span class="o">-</span><span class="n">list</span><span class="w"> </span><span class="o">-</span><span class="n">keystore</span><span class="w"> </span><span class="o">&lt;</span><span class="n">certificato</span><span class="o">&gt;</span><span class="p">.</span><span class="na">p12</span><span class="w"> </span><span class="o">-</span><span class="n">storetype</span><span class="w"> </span><span class="n">pkcs12</span>
 </code></pre></div>
 
@@ -615,10 +625,12 @@ Questi parametri sono opzionali e relativi solo all'invio del token tra la servl
 * <strong>urlRichiesta</strong>: Questo valore va impostato solo nel caso si scelga di non inviare il parametro ReturnUrl durante la chiamata alla servlet di autenticazione per mezzo della pagina di login. In tal caso la servlet restituirà il token utente in <strong>POST</strong> alla pagina specificata in <strong>urlRichiesta</strong>, altrimenti sarà restituito alla pagina specificata in <strong>ReturnUrl</strong>.
 * <strong>urlIndex</strong>: pagina iniziale a cui reindirizzare in caso di errore. Se non viene specificata viene mostrato l'errore nella pagina in cui si presenta.</p>
 <p><strong>c) Parametri relativi all'IdP Cohesion</strong>
-Per abilitare il funzionamento in modalità SAML2.0 è sufficiente cambiare i valori di <strong>urlCheck</strong>, <strong>wsSso</strong> e <strong>additionalData</strong> nel seguente modo:
-* <strong>urlCheck</strong>: https://cohesion2.regione.marche.it/SPManager/WAYF.aspx
-* <strong>wsSso</strong>: https://cohesion2.regione.marche.it/SPManager/wsCheckSessionSPM.asmx
-* <strong>additionalData</strong>: http://yourhost/YOURSITE/Logout.aspx</p>
+Per abilitare il funzionamento in modalità SAML2.0 è sufficiente cambiare i valori di <strong>urlCheck</strong>, <strong>wsSso</strong> e <strong>additionalData</strong> nel seguente modo:</p>
+<ul>
+<li><strong>urlCheck</strong>: https://cohesion2.regione.marche.it/SPManager/WAYF.aspx</li>
+<li><strong>wsSso</strong>: https://cohesion2.regione.marche.it/SPManager/wsCheckSessionSPM.asmx</li>
+<li><strong>additionalData</strong>: http://yourhost/YOURSITE/Logout.aspx</li>
+</ul>
 <p>Deve contenere obbligatoriamente il percorso completo della propria pagina di logout affinché il logout SAML funzioni correttamente. Può contenere altri due parametri opzionali: i livelli di autenticazione da mostrare (parametro AuthRestriction) e un flag per mostrare solo i meccanismi di accesso federato SPID, CIEID, CNS e l'accesso tramite dominio. I vari parametri vanno separati da punto e virgola ";".</p>
 <p>Per approfondimenti in merito alla configurazione dei parametri addizionali, è possibile far riferimento alla pagina <a href="/CohesionID-Docs/Parametri-della-Richiesta-di-Autenticazione">Parametri della Richiesta di Autenticazione</a></p>
 <blockquote>
