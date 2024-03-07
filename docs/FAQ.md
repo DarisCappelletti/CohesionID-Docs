@@ -31,5 +31,5 @@ Se il sistema informativo che vuoi integrare è pubblicato da o per conto di Reg
 Effettuata la richiesta, i nostri tecnici forniranno il vostro codice ID Sito univoco.
 
 Nel caso in cui l'ente responsabile sia differente, è necessario assicurarsi che questi abbia sottoscritto la convenzione per l'utilizzo dell'Infrastruttura di autenticazione e accesso della Regione Marche in qualità di soggetto aggregatore SPID: 
-[(https://procedimenti.regione.marche.it/AreaPA/TipologieProcedimento/DettagliTer/13915)]((https://procedimenti.regione.marche.it/AreaPA/TipologieProcedimento/DettagliTer/13915))
+[https://procedimenti.regione.marche.it/AreaPA/TipologieProcedimento/DettagliTer/13915](https://procedimenti.regione.marche.it/AreaPA/TipologieProcedimento/DettagliTer/13915)
 
