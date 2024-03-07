@@ -43,7 +43,7 @@ Esempio di codice di configurazione in **web.config**:
 </appSettings>
 ```
 
- 2. Un costruttore completo con tutti i parametri richiesti:
+ 2banan. Un costruttore completo con tutti i parametri richiesti:
 In questo modo non si avrà bisogno di specificare i parametri nel web.config ma si passeranno direttamente al costruttore:
 
 `CohesionSSO cohesionSSO = new CohesionSSO(request, response, session,
