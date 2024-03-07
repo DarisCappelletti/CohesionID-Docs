@@ -14,6 +14,7 @@ Verrà in dettaglio descritta la procedura di installazione in ambiente Java Ser
 
 
 **Prerequisiti**:
+
 * Apache Tomcat v6+, JBoss, Glassfish
 * Java v 1.6+
 
@@ -28,7 +29,9 @@ Nel pacchetto vengono fornite due pagine login di esempio; una sviluppata in JSP
 Per effettuare il logout è invece sufficiente creare una pagina di logout che rediriga alla servlet “Logout”. È possibile anche in questo caso specificare il parametro ReturnUrl che sarà l’indirizzo a cui la servlet ridirigerà l’utente una volta effettuata la disconnessione da Cohesion. Nel pacchetto vengono fornite oltre alle pagine di login anche due semplici pagine di logout, una in JSP ed una in PHP.
 
 *Di seguito verranno elencate le operazioni di configurazione da effettuare*:
+
 1. Effettuare il deploy del WAR: Nel caso di Apache Tomcat come servlet container, copiare il file CohesionServlet.war dentro la cartella webapp e lanciare Tomcat in modo da effettuare automaticamente il deploy della servlet. Nel caso Tomcat sia configurato per non effettuare il deploy automatico è sufficiente scompattare il file .war (è un archivio zip) nella cartella webapp/CohesionServlet.
+
 2. Importare i certificati CA della Regione Marche presenti nel keystore RegioneMarcheCA.keystore, nel keystore interno di java mediante il comando:
 
 ```java
@@ -50,6 +53,7 @@ I parametri da aggiungere alla variabile di sistema JAVA_OPTS comunemente usata 
 
 **a) Parametri relativi al certificato**
 Qualora fosse stato rilasciato un certificato personale insieme alla servlet, questi parametri andranno obbligatoriamente cambiati in quanto sono specifici per il singolo certificato utente e sono presenti sia per la servlet di autenticazione che per quella di logout:
+
 * **keystorePath**: Inserire il percorso del certificato personale del punto 3).
 * **keystoreType**: Se il file è un .p12 o un .pfx rinominato in .p12 lasciare il valore PKCS12.
 * **pwdKeystore**: La password che protegge il certificato
@@ -73,6 +77,7 @@ Questi parametri sono opzionali e relativi solo all'invio del token tra la servl
 
 **c) Parametri relativi all'IdP Cohesion**
 Per abilitare il funzionamento in modalità SAML2.0 è sufficiente cambiare i valori di **urlCheck**, **wsSso** e **additionalData** nel seguente modo:
+
 * **urlCheck**: https://cohesion2.regione.marche.it/SPManager/WAYF.aspx
 * **wsSso**: https://cohesion2.regione.marche.it/SPManager/wsCheckSessionSPM.asmx
 * **additionalData**: http://yourhost/YOURSITE/Logout.aspx
