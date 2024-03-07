@@ -84,11 +84,13 @@ Prima dell'URL di logout è possibile inserire la stringa AuthRestricion=0,1,2,3
 * 3 indica di mostrare l'autenticazione SAML "Kerberos"
 
 I seguenti valori sono standard SAML e dovrebbero essere riconosciuti per ogni IdP federato selezionato. Nel caso venga scelto Cohesion come Idp allora i valori saranno interpretati con le modalità di autenticazione già descritte nel punto a), a meno che non venga specificato l'altro parametro opzionale UType=c. 
+
 E’ possibile nascondere o visualizzare le modalità di autenticazione togliendo o aggiungendo i rispettivi valori separati da una virgola. L’ordine non è influente.
 
 > [Opzionale]
 
 Dopo l'URL di logout è possibile inserire la stringa eidas=1. L'inserimento di questa stringa abilita la login eIDAS nel sistema di autenticazione SAML 2.0 di Cohesion. Questa opzione è compatibile con tutte le altre fin qui indicate. 
+
 ES: AuthRestriction=2,1;http://host/YOURSITE/Logout.aspx;UType=c;eidas=1
 
 
