@@ -41,6 +41,7 @@ Esempio di codice di configurazione in **web.config**:
  <add key="site.IndexURL" value="index.aspx"/>
 </appSettings>
 ```
+
 2. Un costruttore completo con tutti i parametri richiesti:
 In questo modo non si avrà bisogno di specificare i parametri nel web.config ma si passeranno direttamente al costruttore:
 
