@@ -40,6 +40,7 @@ Il chiamante, in questo esempio, sarà *example.cohesion.it*:
 </dsAuth>
 ```
 In particolare:
+
 * **id_sito**: è l'identificativo assegnato all'integrazione specifica con Cohesion. Ogni sito ha un id_sito differente e univoco
 * **url_validate**: contiente l'URL al quale Cohesion reindirizza i dati ottenuti dall'Identity Provider utilizzato (Poste, Namirial, Cohesion, ecc...) dopo la login
 * **url_richieste**: contiene l'URL della pagina a cui tornare in caso di errori di autenticazione
@@ -67,6 +68,7 @@ Esempio:
 ```
 
 In questo esempio, diciamo a Cohesion che:
+
 * vogliamo che il token di autenticazione venga inoltrato in POST (per default) all'indirizzo https://example.cohesion.it/Login
 * vogliamo che, una volta fatto il logout, Cohesion reindirizzi all'URL https://example.cohesion.it/LogOff
 * il livello di autenticazione minimo accettabile è il 2 (Codice fiscale + password + PIN se l'IdP è Cohesion oppure SPID livello 2 negli altri casi).
@@ -75,7 +77,13 @@ In questo esempio, diciamo a Cohesion che:
 L'XML contenuto nel parametro auth deve essere codificato in **base64** e poi con **URL Encode**. Un esempio di prodotto finale ha questa forma:
 
 ```xml
-PD94bWwgdmVyc2lvbj0iMS4wIiA%2FPg0KPGRzQXV0aCB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4bWxucz0iaHR0cDovL3RlbXB1cmkub3JnL0F1dGgueHNkIj4NCgk8YXV0aD4NCgkJPHVzZXIvPg0KCQk8aWRfc2EvPg0KCQk8aWRfc2l0bz5leGFtcGxlPC9pZF9zaXRvPg0KCQk8ZXNpdG9fYXV0aF9zYS8+DQoJCTxpZF9zZXNzaW9uZV9zYS8+DQoJCTxpZF9zZXNzaW9uZV9hc3BuZXRfc2EvPg0KCQk8dXJsX3ZhbGlkYXRlPmh0dHBzOi8vZXhhbXBsZS5jb2hlc2lvbi5pdC9Mb2dpbjwvdXJsX3ZhbGlkYXRlPg0KCQk8dXJsX3JpY2hpZXN0YT5odHRwczovL2V4YW1wbGUuY29oZXNpb24uaXQ8L3VybF9yaWNoaWVzdGE+DQoJCTxlc2l0b19hdXRoX3Nzby8+DQoJCTxpZF9zZXNzaW9uZV9zc28vPg0KCQk8aWRfc2Vzc2lvbmVfYXNwbmV0X3Nzby8+DQoJCTxzdGlsZXNoZWV0PkF1dGhSZXN0cmljdGlvbj0yLDM7aHR0cHM6Ly9leGFtcGxlLmNvaGVzaW9uLml0L0xvZ09mZjwvc3RpbGVzaGVldD4NCgk8L2F1dGg+DQo8L2RzQXV0aD4
+PD94bWwgdmVyc2lvbj0iMS4wIiA%2FPg0KPGRzQXV0aCB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIi
+B4bWxucz0iaHR0cDovL3RlbXB1cmkub3JnL0F1dGgueHNkIj4NCgk8YXV0aD4NCgkJPHVzZXIvPg0KCQk8aWRfc2EvPg0KCQk8aWRfc2l0bz5leGFtcGxl
+PC9pZF9zaXRvPg0KCQk8ZXNpdG9fYXV0aF9zYS8+DQoJCTxpZF9zZXNzaW9uZV9zYS8+DQoJCTxpZF9zZXNzaW9uZV9hc3BuZXRfc2EvPg0KCQk8dXJsX3Z
+hbGlkYXRlPmh0dHBzOi8vZXhhbXBsZS5jb2hlc2lvbi5pdC9Mb2dpbjwvdXJsX3ZhbGlkYXRlPg0KCQk8dXJsX3JpY2hpZXN0YT5odHRwczovL2V4YW1wb
+GUuY29oZXNpb24uaXQ8L3VybF9yaWNoaWVzdGE+DQoJCTxlc2l0b19hdXRoX3Nzby8+DQoJCTxpZF9zZXNzaW9uZV9zc28vPg0KCQk8aWRfc2Vzc2lvbm
+VfYXNwbmV0X3Nzby8+DQoJCTxzdGlsZXNoZWV0PkF1dGhSZXN0cmljdGlvbj0yLDM7aHR0cHM6Ly9leGFtcGxlLmNvaGVzaW9uLml0L0xvZ09mZjwvc3Rpb
+GVzaGVldD4NCgk8L2F1dGg+DQo8L2RzQXV0aD4
 
 ```
 
