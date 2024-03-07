@@ -21,6 +21,7 @@ In **TestCohesion.zip** è presente un esempio di progetto .NET 2010 in cui si m
 
 1. un costruttore base con i soli parametri per recuperare le variabili di richiesta http, risposta http e sessione http.
 In questo modo tutti i parametri richiesti dovranno essere specificati nel web.config. 
+
 > In particolare andranno impostate le seguenti chiavi nel web.config:
 
 *  **sso.check.url** : parametro fisso della pagina SSO di Cohesion.
