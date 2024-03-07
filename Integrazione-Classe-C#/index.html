@@ -495,20 +495,26 @@ Questa modalità è sempre preferibile e in particolare è necessaria qualora no
 Di seguito un esempio di codice da inserire nella pagina di form authentication:</p>
 <p><code>CohesionSSO cohesionSSO = new CohesionSSO(Request, Response, Session);
  cohesionSSO.ValidateFE();</code></p>
-<p>Una volta autenticati il token di autenticazione verrà automaticamente salvato nella variabile di sessione “<em>TOKEN</em>”.
-In <strong>TestCohesion.zip</strong> è presente un esempio di progetto .NET 2010 in cui si mostra come integrare Cohesion mediante la classe CohesionSSO.</p>
-<p><strong>La classe dispone di 2 costruttori</strong>:
-1. un costruttore base con i soli parametri per recuperare le variabili di richiesta http, risposta http e sessione http.
+<p>Una volta autenticati il token di autenticazione verrà automaticamente salvato nella variabile di sessione “<em>TOKEN</em>”.</p>
+<p>In <strong>TestCohesion.zip</strong> è presente un esempio di progetto .NET 2010 in cui si mostra come integrare Cohesion mediante la classe CohesionSSO.</p>
+<p><strong>La classe dispone di 2 costruttori</strong>:</p>
+<ol>
+<li>
+<p>un costruttore base con i soli parametri per recuperare le variabili di richiesta http, risposta http e sessione http.
 In questo modo tutti i parametri richiesti dovranno essere specificati nel web.config. </p>
 <blockquote>
-<p>In particolare andranno impostate le seguenti chiavi nel web.config:
-*  <strong>sso.check.url</strong> : parametro fisso della pagina SSO di Cohesion.
-*  <strong>webCheckSessionSSO</strong> : parametro fisso della pagina di recupero token di autenticazione.
-*  <strong>sso.additionalData</strong> : parametri opzionali di autenticazione.
-*  <strong>site.URLLogout</strong> : url della propria pagina di logout relativo alla posizione della pagina protetta; è possibile specificare il parametro ReturnUrl con l'url della pagina a cui ritornare una volta effettuato il logout.
-*  <strong>site.id_sito</strong>: IDSito fornito da Regione Marche la momento della abilitazione alla integrazione cohesion.
-*  <strong>site.IndexURL</strong>: url della propria pagina a cui ritornare in caso di errore di autenticazione.</p>
+<p>In particolare andranno impostate le seguenti chiavi nel web.config:</p>
 </blockquote>
+</li>
+<li>
+<p><strong>sso.check.url</strong> : parametro fisso della pagina SSO di Cohesion.</p>
+</li>
+<li><strong>webCheckSessionSSO</strong> : parametro fisso della pagina di recupero token di autenticazione.</li>
+<li><strong>sso.additionalData</strong> : parametri opzionali di autenticazione.</li>
+<li><strong>site.URLLogout</strong> : url della propria pagina di logout relativo alla posizione della pagina protetta; è possibile specificare il parametro ReturnUrl con l'url della pagina a cui ritornare una volta effettuato il logout.</li>
+<li><strong>site.id_sito</strong>: IDSito fornito da Regione Marche la momento della abilitazione alla integrazione cohesion.</li>
+<li><strong>site.IndexURL</strong>: url della propria pagina a cui ritornare in caso di errore di autenticazione.</li>
+</ol>
 <p>Esempio di codice di configurazione in <strong>web.config</strong>:</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">appSettings</span><span class="o">&gt;</span>
 <span class="w"> </span><span class="o">&lt;</span><span class="k">add</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="s">&quot;sso.check.url&quot;</span><span class="w"> </span><span class="k">value</span><span class="o">=</span><span class="s">&quot;http://cohesion2.regione.marche.it/SSO/Check.aspx&quot;</span><span class="o">/&gt;</span>
@@ -540,10 +546,12 @@ SSOCheckUrl, webCheckSessionSSOUrl, additionalData, indexUrl);</code></p>
 <span class="o">&lt;/</span><span class="n">appSettings</span><span class="o">&gt;</span>
 </code></pre></div>
 
-<p>Di seguito verranno descritti i campi che è possibile cambiare:
-* <strong>site.URLLogout</strong>: Contiene l’url della pagina di Logout dalla posizione della pagina autenticata. A differenza della modalità classica non è però possibile cambiare il parametro ReturnUrl in quanto strettamente dipendente alle funzionalità di logout di SAML.
-* <strong>site.IndexURL</strong>: se presente deve contenere l’url della propria pagina a cui ritornare in caso di errore di autenticazione.
-* <strong>sso.additionalData</strong>: Deve contenere obbligatoriamente il percorso completo della propria pagina di logout affinché il logout SAML funzioni correttamente. Può contenere altri due parametri opzionali: i livelli di autenticazione da mostrare (parametro AuthRestriction) e un flag per mostrare solo i meccanismi di accesso federato SPID, CIEID, CNS e l'accesso tramite dominio. I vari parametri vanno separati da punto e virgola ";".</p>
+<p>Di seguito verranno descritti i campi che è possibile cambiare:</p>
+<ul>
+<li><strong>site.URLLogout</strong>: Contiene l’url della pagina di Logout dalla posizione della pagina autenticata. A differenza della modalità classica non è però possibile cambiare il parametro ReturnUrl in quanto strettamente dipendente alle funzionalità di logout di SAML.</li>
+<li><strong>site.IndexURL</strong>: se presente deve contenere l’url della propria pagina a cui ritornare in caso di errore di autenticazione.</li>
+<li><strong>sso.additionalData</strong>: Deve contenere obbligatoriamente il percorso completo della propria pagina di logout affinché il logout SAML funzioni correttamente. Può contenere altri due parametri opzionali: i livelli di autenticazione da mostrare (parametro AuthRestriction) e un flag per mostrare solo i meccanismi di accesso federato SPID, CIEID, CNS e l'accesso tramite dominio. I vari parametri vanno separati da punto e virgola ";".</li>
+</ul>
 <p>Per approfondimenti in merito alla configurazione dei parametri addizionali, è possibile far riferimento alla pagina <a href="/CohesionID-Docs/Parametri-della-Richiesta-di-Autenticazione">Parametri della Richiesta di Autenticazione</a></p>
 <blockquote>
 <p>[Opzionale]</p>
