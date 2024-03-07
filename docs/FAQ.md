@@ -26,10 +26,10 @@ Se hai bisogno di aiuto in merito all'integrazione di Cohesion, contattaci all'i
 
 
 ## Come posso ottenere il mio ID Sito?
-Se il sistema informativo che vuoi integrare è pubblicato da o per conto di Regione Marche, è possibile compilare direttamente la richiesta di integrazione al seguente link: (https://procedimenti.regione.marche.it/Pratiche/Avvia/3049) 
+Se il sistema informativo che vuoi integrare è pubblicato da o per conto di Regione Marche, è possibile compilare direttamente la richiesta di integrazione al seguente link: [https://procedimenti.regione.marche.it/Pratiche/Avvia/3049](https://procedimenti.regione.marche.it/Pratiche/Avvia/3049)
 
 Effettuata la richiesta, i nostri tecnici forniranno il vostro codice ID Sito univoco.
 
 Nel caso in cui l'ente responsabile sia differente, è necessario assicurarsi che questi abbia sottoscritto la convenzione per l'utilizzo dell'Infrastruttura di autenticazione e accesso della Regione Marche in qualità di soggetto aggregatore SPID: 
-(https://procedimenti.regione.marche.it/AreaPA/TipologieProcedimento/DettagliTer/13915)
+[(https://procedimenti.regione.marche.it/AreaPA/TipologieProcedimento/DettagliTer/13915)]((https://procedimenti.regione.marche.it/AreaPA/TipologieProcedimento/DettagliTer/13915))
 
