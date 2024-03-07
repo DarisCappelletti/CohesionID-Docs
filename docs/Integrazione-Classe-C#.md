@@ -14,12 +14,15 @@ Di seguito un esempio di codice da inserire nella pagina di form authentication:
  cohesionSSO.ValidateFE();`
 
 Una volta autenticati il token di autenticazione verrà automaticamente salvato nella variabile di sessione “_TOKEN_”.
+
 In **TestCohesion.zip** è presente un esempio di progetto .NET 2010 in cui si mostra come integrare Cohesion mediante la classe CohesionSSO.
 
 **La classe dispone di 2 costruttori**:
+
 1. un costruttore base con i soli parametri per recuperare le variabili di richiesta http, risposta http e sessione http.
 In questo modo tutti i parametri richiesti dovranno essere specificati nel web.config. 
 > In particolare andranno impostate le seguenti chiavi nel web.config:
+
 *  **sso.check.url** : parametro fisso della pagina SSO di Cohesion.
 *  **webCheckSessionSSO** : parametro fisso della pagina di recupero token di autenticazione.
 *  **sso.additionalData** : parametri opzionali di autenticazione.
@@ -63,6 +66,7 @@ Di seguito viene descritto un esempio di configurazione di questi parametri per 
 ```
 
 Di seguito verranno descritti i campi che è possibile cambiare:
+
 * **site.URLLogout**: Contiene l’url della pagina di Logout dalla posizione della pagina autenticata. A differenza della modalità classica non è però possibile cambiare il parametro ReturnUrl in quanto strettamente dipendente alle funzionalità di logout di SAML.
 * **site.IndexURL**: se presente deve contenere l’url della propria pagina a cui ritornare in caso di errore di autenticazione.
 * **sso.additionalData**: Deve contenere obbligatoriamente il percorso completo della propria pagina di logout affinché il logout SAML funzioni correttamente. Può contenere altri due parametri opzionali: i livelli di autenticazione da mostrare (parametro AuthRestriction) e un flag per mostrare solo i meccanismi di accesso federato SPID, CIEID, CNS e l'accesso tramite dominio. I vari parametri vanno separati da punto e virgola ";".
