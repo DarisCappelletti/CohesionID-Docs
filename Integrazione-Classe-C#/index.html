@@ -499,22 +499,20 @@ Di seguito un esempio di codice da inserire nella pagina di form authentication:
 <p>In <strong>TestCohesion.zip</strong> è presente un esempio di progetto .NET 2010 in cui si mostra come integrare Cohesion mediante la classe CohesionSSO.</p>
 <p><strong>La classe dispone di 2 costruttori</strong>:</p>
 <ol>
-<li>
-<p>un costruttore base con i soli parametri per recuperare le variabili di richiesta http, risposta http e sessione http.
-In questo modo tutti i parametri richiesti dovranno essere specificati nel web.config. </p>
+<li>un costruttore base con i soli parametri per recuperare le variabili di richiesta http, risposta http e sessione http.
+In questo modo tutti i parametri richiesti dovranno essere specificati nel web.config. </li>
+</ol>
 <blockquote>
 <p>In particolare andranno impostate le seguenti chiavi nel web.config:</p>
 </blockquote>
-</li>
-<li>
-<p><strong>sso.check.url</strong> : parametro fisso della pagina SSO di Cohesion.</p>
-</li>
+<ul>
+<li><strong>sso.check.url</strong> : parametro fisso della pagina SSO di Cohesion.</li>
 <li><strong>webCheckSessionSSO</strong> : parametro fisso della pagina di recupero token di autenticazione.</li>
 <li><strong>sso.additionalData</strong> : parametri opzionali di autenticazione.</li>
 <li><strong>site.URLLogout</strong> : url della propria pagina di logout relativo alla posizione della pagina protetta; è possibile specificare il parametro ReturnUrl con l'url della pagina a cui ritornare una volta effettuato il logout.</li>
 <li><strong>site.id_sito</strong>: IDSito fornito da Regione Marche la momento della abilitazione alla integrazione cohesion.</li>
 <li><strong>site.IndexURL</strong>: url della propria pagina a cui ritornare in caso di errore di autenticazione.</li>
-</ol>
+</ul>
 <p>Esempio di codice di configurazione in <strong>web.config</strong>:</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">appSettings</span><span class="o">&gt;</span>
 <span class="w"> </span><span class="o">&lt;</span><span class="k">add</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="s">&quot;sso.check.url&quot;</span><span class="w"> </span><span class="k">value</span><span class="o">=</span><span class="s">&quot;http://cohesion2.regione.marche.it/SSO/Check.aspx&quot;</span><span class="o">/&gt;</span>
