@@ -6,7 +6,7 @@ Questa modalità è sempre preferibile e in particolare è necessaria qualora no
 
 ## Come integrarlo nel proprio applicativo
 
->  **[Demo asp net core](https://github.com/regione-marche/Cohesion2NETCore)**
+>  **[Demo asp net core](https://github.com/regione-marche/Cohesion2NETFramework)**
 
 In questa pagina è presente un'applicativo di test di autenticazione Cohesion su asp net core in modo da poter provare le funzionalità.
 Nella repo della demo sono indicati i requisiti ed i passaggi da eseguire per integrare l'autenticazione cohesion nel proprio applicativo vengono indicati i requisiti e come fare per integrare Cohesion.
