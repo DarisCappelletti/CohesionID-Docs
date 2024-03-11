@@ -1,4 +1,4 @@
-# Integrazione classe C#_
+# Integrazione classe C# 
 
 
 Con il presente si vuole fornire una panoramica completa delle modalità di integrazione e delle configurazioni di utilizzo del Service Provider fornito con Cohesion in applicativi web che richiedono autenticazione e profilazione utente.
@@ -20,7 +20,10 @@ In **TestCohesion.zip** è presente un esempio di progetto .NET 2010 in cui si m
 
 **La classe dispone di 2 costruttori**:
 
-1. un costruttore base con i soli parametri per recuperare le variabili di richiesta http, risposta http e sessione http.
+
+***
+
+**Costruttore base** con i soli parametri per recuperare le variabili di richiesta http, risposta http e sessione http.
 In questo modo tutti i parametri richiesti dovranno essere specificati nel web.config. 
 
 > In particolare andranno impostate le seguenti chiavi nel web.config:
@@ -43,7 +46,10 @@ Esempio di codice di configurazione in **web.config**:
  <add key="site.IndexURL" value="index.aspx"/>
 </appSettings>
 ```
-2. Un costruttore completo con tutti i parametri richiesti:
+
+***
+
+**Costruttore completo** con tutti i parametri richiesti:
 In questo modo non si avrà bisogno di specificare i parametri nel web.config ma si passeranno direttamente al costruttore:
 
 `CohesionSSO cohesionSSO = new CohesionSSO(request, response, session,
