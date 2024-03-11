@@ -1,4 +1,5 @@
-# Cohesion2NETCore
+# Integrazione .NET Core 8
+## Cohesion2NETCore
 Adattamento della classe CohesionSSO.cs per l'utilizzo con .NET Core.
 
 ## Per integrare Cohesion
