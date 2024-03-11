@@ -72,13 +72,13 @@ Se l'ente è federato in modalità aggregata, sarà necessario inserire il param
 Se non specificato, verrà utilizzata la modalità di default diretta
 
 ## `eidas`
-Abilita il login tramite il nodo italiano eIDAS specificandone il livello di autenticazione (1,2,3).
+Abilita il login tramite il nodo italiano eIDAS specificando se è necessaria la verifica del Codice Fiscale a valle dell'autenticaizione:
 
-Livello 1 = Autenticazione a singolo fattore (passowrd)
+eidas = 1 Autenticazione eidas, nessuna verifica cf
 
-Livello 2 = Autenticazione a doppio fattore (password e Token OTP)
+eidas 2 = Verifica semplice CF
 
-Livello 3 = Autenticazione tramite smart card
+eidas3 = Verifica CF con supporto fisico
 
 Ad esempio, impostando il parametro come `eidas=3` sarà consentito l'accesso solo tramite l'utilizzo di smart card, escludendo i livelli di autenticazione più bassi.
 ## `SpidMode`
