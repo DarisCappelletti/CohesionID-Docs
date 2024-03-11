@@ -72,15 +72,16 @@ Se l'ente è federato in modalità aggregata, sarà necessario inserire il param
 Se non specificato, verrà utilizzata la modalità di default diretta
 
 ## `eidas`
-Abilita il login tramite il nodo italiano eIDAS specificando se è necessaria la verifica del Codice Fiscale a valle dell'autenticaizione:
+Abilita il login tramite il nodo italiano eIDAS specificando se, a valle dell'autenticazione, è necessaria la verifica del Codice Fiscale:
 
-eidas = 1 Autenticazione eidas, nessuna verifica cf
+`eidas=1` = Autenticazione eidas abilitata, nessuna verifica del Codice Fiscale.
 
-eidas 2 = Verifica semplice CF
+`eidas=2` = Verifica semplice del Codice Fiscale.
 
-eidas3 = Verifica CF con supporto fisico
+`eidas=3` = Verifica del Codice Fiscale con supporto fisico.
 
-Ad esempio, impostando il parametro come `eidas=3` sarà consentito l'accesso solo tramite l'utilizzo di smart card, escludendo i livelli di autenticazione più bassi.
+Ad esempio, impostando il parametro come `eidas=3` sarà necessaria la verifica del Codice Fiscale tramite supporto, escludendo i livelli di autenticazione più bassi.
+
 ## `SpidMode`
 Definisce il protocollo di autenticazione che CohesionID deve utilizzare per comunicare con la piattaforma nazionale SPID. 
 
