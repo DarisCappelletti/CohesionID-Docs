@@ -450,6 +450,15 @@ Hai bisogno di assistenza con Cohesion? <a href="mailto:integrazioneCohesion@reg
 </li>
       
         <li class="md-nav__item">
+  <a href="#aggregato" class="md-nav__link">
+    <span class="md-ellipsis">
+      aggregato
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eidas" class="md-nav__link">
     <span class="md-ellipsis">
       eidas
@@ -636,6 +645,15 @@ Hai bisogno di assistenza con Cohesion? <a href="mailto:integrazioneCohesion@reg
 </li>
       
         <li class="md-nav__item">
+  <a href="#aggregato" class="md-nav__link">
+    <span class="md-ellipsis">
+      aggregato
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eidas" class="md-nav__link">
     <span class="md-ellipsis">
       eidas
@@ -706,7 +724,7 @@ https://cohesion2.regione.marche.it:443/testcohesion/privato/pagina_protetta.asp
 <span class="nt">&lt;id_sessione_sso</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;id_sessione_aspnet_sso</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;stilesheet&gt;</span>AuthRestriction=3,2,1,0;
-https://cohesion2.regione.marche.it/testcohesion/Index.aspx;UType=d;purpose=PG|PF|LP;eidas=3;SpidMode=OIDC;CieMode=OIDC;IPA=c_000<span class="nt">&lt;/stilesheet&gt;</span>
+https://cohesion2.regione.marche.it/testcohesion/Index.aspx;UType=d;purpose=PG|PF|LP;aggregato=1;eidas=3;SpidMode=OIDC;CieMode=OIDC;IPA=c_000<span class="nt">&lt;/stilesheet&gt;</span>
 <span class="nt">&lt;/auth&gt;</span>
 <span class="nt">&lt;/dsAuth&gt;</span>
 </code></pre></div>
@@ -734,6 +752,8 @@ https://cohesion2.regione.marche.it/testcohesion/Index.aspx;UType=d;purpose=PG|P
 <p>PG = SPID Giuridico, rilasciata ad una persona fisica a cui vengono associati anche i dati della persona giuridica per cui opera.</p>
 <p>Ad esempio, impostando il parametro come <code>purpose=PG</code> Cohesion consentirà l'accesso solamente alle persone dotate di SPID Giuridico.</p>
 <p>Per la lista completa dei gestori di Identità Digitali che supportano le tipologie PG e LP, si prega di consultare il seguente link: https://www.agid.gov.it/it/piattaforme/spid</p>
+<h2 id="aggregato"><code>aggregato</code></h2>
+<p>Se si è federati in modalità aggregata, sarà necessario inserire il parametro <code>aggregato=1</code></p>
 <h2 id="eidas"><code>eidas</code></h2>
 <p>Abilita il login tramite il nodo italiano eIDAS specificandone il livello di autenticazione (1,2,3).</p>
 <p>Livello 1 = Autenticazione a singolo fattore (passowrd)</p>

@@ -19,7 +19,7 @@ https://cohesion2.regione.marche.it:443/testcohesion/privato/pagina_protetta.asp
 <id_sessione_sso />
 <id_sessione_aspnet_sso />
 <stilesheet>AuthRestriction=3,2,1,0;
-https://cohesion2.regione.marche.it/testcohesion/Index.aspx;UType=d;purpose=PG|PF|LP;eidas=3;SpidMode=OIDC;CieMode=OIDC;IPA=c_000</stilesheet>
+https://cohesion2.regione.marche.it/testcohesion/Index.aspx;UType=d;purpose=PG|PF|LP;aggregato=1;eidas=3;SpidMode=OIDC;CieMode=OIDC;IPA=c_000</stilesheet>
 </auth>
 </dsAuth>
 
@@ -65,6 +65,9 @@ PG = SPID Giuridico, rilasciata ad una persona fisica a cui vengono associati an
 Ad esempio, impostando il parametro come `purpose=PG` Cohesion consentirà l'accesso solamente alle persone dotate di SPID Giuridico.
 
 Per la lista completa dei gestori di Identità Digitali che supportano le tipologie PG e LP, si prega di consultare il seguente link: https://www.agid.gov.it/it/piattaforme/spid
+
+## `aggregato`
+Se si è federati in modalità aggregata, sarà necessario inserire il parametro `aggregato=1`
 
 ## `eidas`
 Abilita il login tramite il nodo italiano eIDAS specificandone il livello di autenticazione (1,2,3).
