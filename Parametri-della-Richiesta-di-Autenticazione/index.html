@@ -756,10 +756,10 @@ https://cohesion2.regione.marche.it/testcohesion/Index.aspx;UType=d;purpose=PG|P
 <p>Se l'ente è federato in modalità aggregata, sarà necessario inserire il parametro <code>aggregato=1</code></p>
 <p>Se non specificato, verrà utilizzata la modalità di default diretta</p>
 <h2 id="eidas"><code>eidas</code></h2>
-<p>Abilita il login tramite il nodo italiano eIDAS specificandone il livello di autenticazione (1,2,3).</p>
-<p>Livello 1 = Autenticazione a singolo fattore (passowrd)</p>
-<p>Livello 2 = Autenticazione a doppio fattore (password e Token OTP)</p>
-<p>Livello 3 = Autenticazione tramite smart card</p>
+<p>Abilita il login tramite il nodo italiano eIDAS specificando se è necessaria la verifica del Codice Fiscale a valle dell'autenticaizione:</p>
+<p>eidas = 1 Autenticazione eidas, nessuna verifica cf</p>
+<p>eidas 2 = Verifica semplice CF</p>
+<p>eidas3 = Verifica CF con supporto fisico</p>
 <p>Ad esempio, impostando il parametro come <code>eidas=3</code> sarà consentito l'accesso solo tramite l'utilizzo di smart card, escludendo i livelli di autenticazione più bassi.</p>
 <h2 id="spidmode"><code>SpidMode</code></h2>
 <p>Definisce il protocollo di autenticazione che CohesionID deve utilizzare per comunicare con la piattaforma nazionale SPID. </p>
