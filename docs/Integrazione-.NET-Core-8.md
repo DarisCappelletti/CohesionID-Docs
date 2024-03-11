@@ -81,4 +81,4 @@ public class AccountController : Controller
 
 ```
 
-Per ulteriori dettagli, fare riferimento al codice della classe e alla documentazione ufficiale disponibile nel [sito informativo di Cohesion](https://cohesion.regione.marche.it/cohesioninformativo/Come-integrare-Cohesion/Integrazione-classe-C).
+Per ulteriori dettagli, fare riferimento al codice della classe e alla documentazione ufficiale disponibile nela sezione [Integrazione Classe C#]().
