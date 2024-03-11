@@ -1,4 +1,5 @@
-# Integrazione classe C#
+# Integrazione classe C#_
+
 
 Con il presente si vuole fornire una panoramica completa delle modalità di integrazione e delle configurazioni di utilizzo del Service Provider fornito con Cohesion in applicativi web che richiedono autenticazione e profilazione utente.
 Verrà in dettaglio descritta la procedura di installazione in ambiente IIS mediante classe C# CohesionSSO.cs e la configurazione per l’utilizzo classico ed il funzionamento in modalità federata SAML2.0.
