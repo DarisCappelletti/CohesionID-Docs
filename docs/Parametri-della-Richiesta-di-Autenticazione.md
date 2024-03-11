@@ -67,7 +67,9 @@ Ad esempio, impostando il parametro come `purpose=PG` Cohesion consentirà l'acc
 Per la lista completa dei gestori di Identità Digitali che supportano le tipologie PG e LP, si prega di consultare il seguente link: https://www.agid.gov.it/it/piattaforme/spid
 
 ## `aggregato`
-Se si è federati in modalità aggregata, sarà necessario inserire il parametro `aggregato=1`
+Se l'ente è federato in modalità aggregata, sarà necessario inserire il parametro `aggregato=1`
+
+Se non specificato, verrà utilizzata la modalità di default diretta
 
 ## `eidas`
 Abilita il login tramite il nodo italiano eIDAS specificandone il livello di autenticazione (1,2,3).
