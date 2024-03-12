@@ -37,5 +37,9 @@ markdown_extensions:
   - admonition
   - codehilite
 
+nav:
+    - ...
+    - Link Title: https://test.com
+
 docs_dir: docs
 site_dir: site
