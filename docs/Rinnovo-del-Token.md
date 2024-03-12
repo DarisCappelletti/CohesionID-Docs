@@ -1,8 +1,3 @@
----
-title: Rinnovo del Token
-nav_order: 1  # Imposta l'ordinamento della pagina nel menu di navigazione
----
-
 # Come rinnovare il Token
 Il Token di Cohesion ha validità di 60 minuti.
 Se si vuole rinnovare il Token è necessario che l'utente transiti nuovamente per la pagina di LogIn di Cohesion. 
