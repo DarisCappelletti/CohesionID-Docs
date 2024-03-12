@@ -1,7 +1,6 @@
 ---
-title: La mia pagina speciale
+title: Rinnovo del Token
 nav_order: 1  # Imposta l'ordinamento della pagina nel menu di navigazione
-custom_setting: valore_personalizzato  # Aggiungi una tua impostazione personalizzata
 ---
 
 # Come rinnovare il Token
