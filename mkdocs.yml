@@ -1,4 +1,5 @@
 site_name: CohesionID-Docs
+site_url: https://dariscappelletti.github.io/CohesionID-Docs/
 
 theme:
   name: material
@@ -6,6 +7,8 @@ theme:
   custom_dir: Custom/overrides
   features:
     - announce.dismiss
+    - navigation.instant
+    - navigation.instant.progress
   palette: 
     # Palette toggle for light mode
     - scheme: default
