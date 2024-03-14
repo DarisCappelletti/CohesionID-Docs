@@ -5,6 +5,7 @@ theme:
   name: material
   language: it
   logo: https://raw.githubusercontent.com/DarisCappelletti/CohesionID-Docs/main/Assets/img/regione-marche-logo.png
+  favicon: assets/img/favicon.png
   custom_dir: Custom/overrides
   features:
     - announce.dismiss
@@ -43,22 +44,22 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home:
+  - Home: 
         - Cohesion id: index.md
-  - Integrare Cohesion:
+  - Integrare Cohesion: 
       - Integrare Cohesion: Pubbliche-Amministrazioni-e-Imprese.md
       - Flusso di autenticazione: Flusso-di-Autenticazione.md
       - Parametri della richiesta di autenticazione: Parametri-della-Richiesta-di-Autenticazione.md
+      - Tipologie e livelli di accesso disponibili: Tipologie-e-livelli-di-accesso-disponibili-in-CohesionID.md
       - Documentazione tecnica:
         - Integrazione .NET Core 8: https://github.com/regione-marche/Cohesion2NETCore8Library
         - Integrazione C#: Integrazione-Classe-C-Sharp.md
         - Integrazione C# Core: Integrazione-C-Sharp-Core.md
         - Integrazione PHP: https://github.com/regione-marche/Cohesion2PHPLibrary
         - Integrazione Phyton: https://github.com/regione-marche/Cohesion2PythonIntegrationTest
-      - Rinnovo del Token: Rinnovo-del-Token.md
-      - Tipologie e livelli di accesso disponibili: Tipologie-e-livelli-di-accesso-disponibili-in-CohesionID.md
-      - Configuratore Cohesion: https://colab.research.google.com/gist/xavbeta/f710b69eba7843c006ff11e561e1c2c1/configurazione-integrazione-cohesion.ipynb
-  - FAQ: FAQ.md
+        - Rinnovo del Token: Rinnovo-del-Token.md
+        - Configuratore integrazioni: https://colab.research.google.com/gist/xavbeta/f710b69eba7843c006ff11e561e1c2c1/configurazione-integrazione-cohesion.ipynb
+  - FAQ: FAQ.md 
 
 docs_dir: docs
 site_dir: site
