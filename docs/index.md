@@ -4,8 +4,8 @@ hide:
     - footer
 ---
 
-![cohesion](https://raw.githubusercontent.com/DarisCappelletti/CohesionID-Docs/main/docs/Assets/img/cohesion.png#only-dark)
-![cohesion](https://raw.githubusercontent.com/DarisCappelletti/CohesionID-Docs/main/docs/Assets/img/cohesionblack.png#only-light)
+![cohesion](https://raw.githubusercontent.com/DarisCappelletti/CohesionID-Docs/main/Assets/img/cohesion.png#only-dark)
+![cohesion](https://raw.githubusercontent.com/DarisCappelletti/CohesionID-Docs/main/Assets/img/cohesionblack.png#only-light)
 
 # Che cos'è?
 CohesionID è il framework di autenticazione della Regione Marche che permette di verificare la corretta identità degli utenti (Persone fisiche munite di codice fiscale) che accedono a servizi digitali della Regione o degli Enti convenzionati. 
