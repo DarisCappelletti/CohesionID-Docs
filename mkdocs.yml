@@ -28,6 +28,7 @@ theme:
 
 extra:
   generator: false
+  homepage: https://www.regione.marche.it/
 
 plugins:
   - search
