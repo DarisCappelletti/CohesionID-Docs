@@ -4,7 +4,7 @@ site_url: https://dariscappelletti.github.io/CohesionID-Docs/
 theme:
   name: material
   language: it
-  logo: /Assets/img/regione-marche-logo.png
+  logo: https://raw.githubusercontent.com/DarisCappelletti/CohesionID-Docs/main/Assets/img/regione-marche-logo.png
   custom_dir: Custom/overrides
   features:
     - announce.dismiss
