@@ -9,6 +9,10 @@ theme:
     - announce.dismiss
     - navigation.instant
     - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.footer
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -24,11 +28,8 @@ theme:
 extra:
   generator: false
 
-extra_javascript:
-  - 'docs/_Footer.md'
-  - 'docs/_Sidebar.md'
-
 plugins:
+  - search
   - awesome-pages:
         collapse_single_pages: true
         strict: false
@@ -36,10 +37,26 @@ plugins:
 markdown_extensions:
   - admonition
   - codehilite
+  - toc:
+      permalink: true
 
 nav:
-    - ...
-    - Link Title: https://test.com
+  - Home:
+        - Cohesion id: index.md
+  - Integrare Cohesion:
+      - Integrare Cohesion: Pubbliche-Amministrazioni-e-Imprese.md
+      - Flusso di autenticazione: Flusso-di-Autenticazione.md
+      - Parametri della richiesta di autenticazione: Parametri-della-Richiesta-di-Autenticazione.md
+      - Documentazione tecnica:
+        - Integrazione .NET Core 8: https://github.com/regione-marche/Cohesion2NETCore8Library
+        - Integrazione C#: Integrazione-Classe-C-Sharp.md
+        - Integrazione C# Core: Integrazione-C-Sharp-Core.md
+        - Integrazione PHP: https://github.com/regione-marche/Cohesion2PHPLibrary
+        - Integrazione Phyton: https://github.com/regione-marche/Cohesion2PythonIntegrationTest
+      - Rinnovo del Token: Rinnovo-del-Token.md
+      - Tipologie e livelli di accesso disponibili: Tipologie-e-livelli-di-accesso-disponibili-in-CohesionID.md
+      - Configuratore Cohesion: https://colab.research.google.com/gist/xavbeta/f710b69eba7843c006ff11e561e1c2c1/configurazione-integrazione-cohesion.ipynb
+  - FAQ: FAQ.md
 
 docs_dir: docs
 site_dir: site
