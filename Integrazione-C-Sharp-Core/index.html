@@ -920,19 +920,19 @@ Hai bisogno di assistenza con Cohesion? <a href="mailto:integrazioneCohesion@reg
                   
 
 
-<h1 id="integrazione-c-core">Integrazione C# Core<a class="headerlink" href="#integrazione-c-core" title="Permanent link">&para;</a></h1>
+<h1 id="integrazione-c-core"><strong>Integrazione C# Core</strong><a class="headerlink" href="#integrazione-c-core" title="Permanent link">&para;</a></h1>
 <p>Con il presente si vuole fornire una panoramica completa delle modalità di integrazione e delle configurazioni di utilizzo del Service Provider fornito con Cohesion in applicativi web che richiedono autenticazione e profilazione utente.
 Verrà in dettaglio descritta la procedura di installazione in ambiente IIS mediante classe C# CohesionSSO.cs e la configurazione per l’utilizzo classico ed il funzionamento in modalità federata SAML2.0.
 Questa modalità è sempre preferibile e in particolare è necessaria qualora non venga rilasciato all’ente un certificato personale per la comunicazione con Cohesion.</p>
-<h2 id="come-integrarlo-nel-proprio-applicativo">Come integrarlo nel proprio applicativo<a class="headerlink" href="#come-integrarlo-nel-proprio-applicativo" title="Permanent link">&para;</a></h2>
+<h2 id="come-integrarlo-nel-proprio-applicativo"><strong>Come integrarlo nel proprio applicativo</strong><a class="headerlink" href="#come-integrarlo-nel-proprio-applicativo" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><strong><a href="https://github.com/regione-marche/Cohesion2NETCore">Demo asp net core</a></strong></p>
 </blockquote>
 <p>In questa pagina è presente un'applicativo di test di autenticazione Cohesion su asp net core in modo da poter provare le funzionalità.
 Nella repo della demo sono indicati i requisiti ed i passaggi da eseguire per integrare l'autenticazione cohesion nel proprio applicativo vengono indicati i requisiti e come fare per integrare Cohesion.</p>
-<h2 id="cohesionservicecs">CohesionService.cs<a class="headerlink" href="#cohesionservicecs" title="Permanent link">&para;</a></h2>
+<h2 id="cohesionservicecs"><strong>CohesionService.cs</strong><a class="headerlink" href="#cohesionservicecs" title="Permanent link">&para;</a></h2>
 <p>Questo service mette a disposizione una serie di metodi che permettono di gestire tutti i passaggi dell'autenticazione tramite cohesion partendo dal login fino alla richiesta di logout.</p>
-<h3 id="il-metodo-requestauth">Il metodo "RequestAuth"<a class="headerlink" href="#il-metodo-requestauth" title="Permanent link">&para;</a></h3>
+<h3 id="il-metodo-requestauth"><strong>Il metodo "RequestAuth"</strong><a class="headerlink" href="#il-metodo-requestauth" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><code>RequestAuth(string urlValidation, string urlReturn)</code></p>
 </blockquote>
@@ -942,17 +942,17 @@ Nella repo della demo sono indicati i requisiti ed i passaggi da eseguire per in
 <li>urlReturn - ovvero l'url dove si vorrà reindirizzare l'utente una volta effettuata la richiesta di login con successo</li>
 </ul>
 <p>infine ritorna un url dove verrà rindirizzato l'utente per effettuare correttamente il login di cohesion.</p>
-<h3 id="il-metodo-checkauth">Il metodo "CheckAuth"<a class="headerlink" href="#il-metodo-checkauth" title="Permanent link">&para;</a></h3>
+<h3 id="il-metodo-checkauth"><strong>Il metodo "CheckAuth"</strong><a class="headerlink" href="#il-metodo-checkauth" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><code>CheckAuth(string auth)</code></p>
 </blockquote>
 <p>verifica se la richiesta di login a cohesion ha avuto esito positivo o negativo restituendo un oggetto "AuthCohesionCheckResponse".</p>
-<h3 id="il-metodo-logoutfe">Il metodo "LogoutFE"<a class="headerlink" href="#il-metodo-logoutfe" title="Permanent link">&para;</a></h3>
+<h3 id="il-metodo-logoutfe"><strong>Il metodo "LogoutFE"</strong><a class="headerlink" href="#il-metodo-logoutfe" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><code>LogoutFE(_session)</code></p>
 </blockquote>
 <p>è utilizzato per effettuare la richiesta logout passando al metodo la sessione attuale dell'utente dove è possibile, se presenti, estrapolare i parametri di login ed effettuare correttamente il logout.</p>
-<h2 id="appsettingsjson">appsettings.json<a class="headerlink" href="#appsettingsjson" title="Permanent link">&para;</a></h2>
+<h2 id="appsettingsjson"><strong>appsettings.json</strong><a class="headerlink" href="#appsettingsjson" title="Permanent link">&para;</a></h2>
 <p>Nel file appsettings.json è necessario impostare dei valori per il corretto funzionamento dell'autenticazione tramite cohesion.</p>
 <blockquote>
 <p>In particolare andranno impostate le seguenti chiavi:</p>
