@@ -1,10 +1,10 @@
-# Integrazione C# Core
+# **Integrazione C# Core**
 
 Con il presente si vuole fornire una panoramica completa delle modalità di integrazione e delle configurazioni di utilizzo del Service Provider fornito con Cohesion in applicativi web che richiedono autenticazione e profilazione utente.
 Verrà in dettaglio descritta la procedura di installazione in ambiente IIS mediante classe C# CohesionSSO.cs e la configurazione per l’utilizzo classico ed il funzionamento in modalità federata SAML2.0.
 Questa modalità è sempre preferibile e in particolare è necessaria qualora non venga rilasciato all’ente un certificato personale per la comunicazione con Cohesion.
 
-## Come integrarlo nel proprio applicativo
+## **Come integrarlo nel proprio applicativo**
 
 >  **[Demo asp net core](https://github.com/regione-marche/Cohesion2NETCore)**
 
@@ -13,11 +13,11 @@ Nella repo della demo sono indicati i requisiti ed i passaggi da eseguire per in
 
 
 
-## CohesionService.cs
+## **CohesionService.cs**
 
 Questo service mette a disposizione una serie di metodi che permettono di gestire tutti i passaggi dell'autenticazione tramite cohesion partendo dal login fino alla richiesta di logout.
 
-### Il metodo "RequestAuth"
+### **Il metodo "RequestAuth"**
 
 > `RequestAuth(string urlValidation, string urlReturn)`
 
@@ -28,19 +28,19 @@ crea un base64 di una richiesta di login a cohesion dove sono richiesti 2 parame
 
 infine ritorna un url dove verrà rindirizzato l'utente per effettuare correttamente il login di cohesion.
 
-### Il metodo "CheckAuth"
+### **Il metodo "CheckAuth"**
 
 > `CheckAuth(string auth)`
 
 verifica se la richiesta di login a cohesion ha avuto esito positivo o negativo restituendo un oggetto "AuthCohesionCheckResponse".
 
-### Il metodo "LogoutFE"
+### **Il metodo "LogoutFE"**
 
 > `LogoutFE(_session)`
 
 è utilizzato per effettuare la richiesta logout passando al metodo la sessione attuale dell'utente dove è possibile, se presenti, estrapolare i parametri di login ed effettuare correttamente il logout.
 
-## appsettings.json
+## **appsettings.json**
 
 Nel file appsettings.json è necessario impostare dei valori per il corretto funzionamento dell'autenticazione tramite cohesion.
 
