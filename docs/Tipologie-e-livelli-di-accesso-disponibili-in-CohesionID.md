@@ -1,3 +1,4 @@
+# **Tipologie e livelli di accesso disponibili in CohesionID**
 | SSO       | Livello | eIDAS | tipo_autenticazione | issuer                                                               | Assertiion/Issuer  | AuthnContextClassRef|
 | :---      |:----:   |:----: |:----:               |:----:                                                                |:----:              | ---:|
 | SPID      |L1       |LoA2   |PW                   |provider, es: https://posteid.poste.it/                               |Uguale al precedente|https://www.spid.gov.it/SpidL1|
