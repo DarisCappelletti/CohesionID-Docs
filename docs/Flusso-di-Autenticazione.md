@@ -1,20 +1,20 @@
-# Flusso di Autenticazione
-## 1. L'utente richiede di effettuare il login  
+# **Flusso di Autenticazione**
+## **1. L'utente richiede di effettuare il login ** 
 
 L'utente desidera effettuare l'accesso ad un'applicazione che integra il sistema Cohesion, cliccando sul _login_ viene reindirizzato al sistema Cohesion ID.
 
-## 2. L'utente sceglie l'IdP
+## **2. L'utente sceglie l'IdP**
 
 L'utente seleziona l'_Identity Provider_ per effettuare la procedura di riconoscimento. 
 Cohesion genera una richiesta di accesso in cui ottiene il **Codice Fiscale** e l'**ID Sessione** dell'utente.
 
-## 3. Accesso all'applicativo
+## **3. Accesso all'applicativo**
 
 Cohesion effettua una seconda chiamata al fine ottenere gli attributi dell'utente recuperati dall'Identity Provider scelto dall'utente.
 
 L'utente viene reindirizzato all'applicazione con un _token proprietario_, contente gli attributi necessari all'accesso.
 
-# Auth Request
+## **Auth Request**
 
 Per accedere ai servizi offerti da CohesionID, è necessario effettuare una chiamata in GET all'indirizzo [https://cohesion2.regione.marche.it/SPManager/WAYF.aspx](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fcohesion2.regione.marche.it%2FSPManager%2FWAYF.aspx) con un parametro _AUTH_ contenente dei parametri di autenticazione come quelli dell'esempio in basso.
 
@@ -87,7 +87,7 @@ GVzaGVldD4NCgk8L2F1dGg+DQo8L2RzQXV0aD4
 
 ```
 
-# Cosa contiene il token Cohesion dopo l'autenticazione?
+## **Cosa contiene il token Cohesion dopo l'autenticazione?**
 
 Dopo l'autenticazione dell'utente, Cohesion effettua una chiamata **POST** all'indirizzo specificato in **url_validate** nel cui body verrà specificato un token di autenticazione. 
 Nel body ci sarà un elemento *auth* codificato in base64 e URL Encoded che conterrà un XML di questo tipo:
@@ -184,7 +184,7 @@ Gli attributi dell'utente sono contenuti nell'oggetto *Object*. Gli attributi re
 **NOTA BENE**: *Object* contiene anche il token SAML in `samlResponseBase64` il cui valore è quello della _SAMLResponse_ originale restituita dall'Identity Provider scelto dall'utente.
 
 
-# Come effettuare il logout?
+## **Come effettuare il logout?**
 
 Per effettuare il *logout* basterà semplicemente chiamare lo stesso endpoint utilizzato per ottenere gli attributi dell'utente andando a modificare il parametro **Operation** e specificando *LogoutSito* invece di *GetCredential*
 

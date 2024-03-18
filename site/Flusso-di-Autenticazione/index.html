@@ -489,7 +489,7 @@ Hai bisogno di assistenza con Cohesion? <a href="mailto:integrazioneCohesion@reg
         <li class="md-nav__item">
   <a href="#1-lutente-richiede-di-effettuare-il-login" class="md-nav__link">
     <span class="md-ellipsis">
-      1. L'utente richiede di effettuare il login
+      **1. L'utente richiede di effettuare il login **
     </span>
   </a>
   
@@ -508,6 +508,33 @@ Hai bisogno di assistenza con Cohesion? <a href="mailto:integrazioneCohesion@reg
   <a href="#3-accesso-allapplicativo" class="md-nav__link">
     <span class="md-ellipsis">
       3. Accesso all'applicativo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auth Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cosa-contiene-il-token-cohesion-dopo-lautenticazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cosa contiene il token Cohesion dopo l'autenticazione?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-effettuare-il-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Come effettuare il logout?
     </span>
   </a>
   
@@ -813,7 +840,7 @@ Hai bisogno di assistenza con Cohesion? <a href="mailto:integrazioneCohesion@reg
         <li class="md-nav__item">
   <a href="#1-lutente-richiede-di-effettuare-il-login" class="md-nav__link">
     <span class="md-ellipsis">
-      1. L'utente richiede di effettuare il login
+      **1. L'utente richiede di effettuare il login **
     </span>
   </a>
   
@@ -837,6 +864,33 @@ Hai bisogno di assistenza con Cohesion? <a href="mailto:integrazioneCohesion@reg
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#auth-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auth Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cosa-contiene-il-token-cohesion-dopo-lautenticazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cosa contiene il token Cohesion dopo l'autenticazione?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-effettuare-il-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Come effettuare il logout?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -852,16 +906,16 @@ Hai bisogno di assistenza con Cohesion? <a href="mailto:integrazioneCohesion@reg
                   
 
 
-<h1 id="flusso-di-autenticazione">Flusso di Autenticazione<a class="headerlink" href="#flusso-di-autenticazione" title="Permanent link">&para;</a></h1>
-<h2 id="1-lutente-richiede-di-effettuare-il-login">1. L'utente richiede di effettuare il login<a class="headerlink" href="#1-lutente-richiede-di-effettuare-il-login" title="Permanent link">&para;</a></h2>
+<h1 id="flusso-di-autenticazione"><strong>Flusso di Autenticazione</strong><a class="headerlink" href="#flusso-di-autenticazione" title="Permanent link">&para;</a></h1>
+<h2 id="1-lutente-richiede-di-effettuare-il-login">**1. L'utente richiede di effettuare il login **<a class="headerlink" href="#1-lutente-richiede-di-effettuare-il-login" title="Permanent link">&para;</a></h2>
 <p>L'utente desidera effettuare l'accesso ad un'applicazione che integra il sistema Cohesion, cliccando sul <em>login</em> viene reindirizzato al sistema Cohesion ID.</p>
-<h2 id="2-lutente-sceglie-lidp">2. L'utente sceglie l'IdP<a class="headerlink" href="#2-lutente-sceglie-lidp" title="Permanent link">&para;</a></h2>
+<h2 id="2-lutente-sceglie-lidp"><strong>2. L'utente sceglie l'IdP</strong><a class="headerlink" href="#2-lutente-sceglie-lidp" title="Permanent link">&para;</a></h2>
 <p>L'utente seleziona l'<em>Identity Provider</em> per effettuare la procedura di riconoscimento. 
 Cohesion genera una richiesta di accesso in cui ottiene il <strong>Codice Fiscale</strong> e l'<strong>ID Sessione</strong> dell'utente.</p>
-<h2 id="3-accesso-allapplicativo">3. Accesso all'applicativo<a class="headerlink" href="#3-accesso-allapplicativo" title="Permanent link">&para;</a></h2>
+<h2 id="3-accesso-allapplicativo"><strong>3. Accesso all'applicativo</strong><a class="headerlink" href="#3-accesso-allapplicativo" title="Permanent link">&para;</a></h2>
 <p>Cohesion effettua una seconda chiamata al fine ottenere gli attributi dell'utente recuperati dall'Identity Provider scelto dall'utente.</p>
 <p>L'utente viene reindirizzato all'applicazione con un <em>token proprietario</em>, contente gli attributi necessari all'accesso.</p>
-<h1 id="auth-request">Auth Request<a class="headerlink" href="#auth-request" title="Permanent link">&para;</a></h1>
+<h2 id="auth-request"><strong>Auth Request</strong><a class="headerlink" href="#auth-request" title="Permanent link">&para;</a></h2>
 <p>Per accedere ai servizi offerti da CohesionID, è necessario effettuare una chiamata in GET all'indirizzo <a href="https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fcohesion2.regione.marche.it%2FSPManager%2FWAYF.aspx">https://cohesion2.regione.marche.it/SPManager/WAYF.aspx</a> con un parametro <em>AUTH</em> contenente dei parametri di autenticazione come quelli dell'esempio in basso.</p>
 <p>Il chiamante, in questo esempio, sarà <em>example.cohesion.it</em>:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
@@ -927,7 +981,7 @@ VfYXNwbmV0X3Nzby8+DQoJCTxzdGlsZXNoZWV0PkF1dGhSZXN0cmljdGlvbj0yLDM7aHR0cHM6Ly9leG
 GVzaGVldD4NCgk8L2F1dGg+DQo8L2RzQXV0aD4
 </code></pre></div>
 
-<h1 id="cosa-contiene-il-token-cohesion-dopo-lautenticazione">Cosa contiene il token Cohesion dopo l'autenticazione?<a class="headerlink" href="#cosa-contiene-il-token-cohesion-dopo-lautenticazione" title="Permanent link">&para;</a></h1>
+<h2 id="cosa-contiene-il-token-cohesion-dopo-lautenticazione"><strong>Cosa contiene il token Cohesion dopo l'autenticazione?</strong><a class="headerlink" href="#cosa-contiene-il-token-cohesion-dopo-lautenticazione" title="Permanent link">&para;</a></h2>
 <p>Dopo l'autenticazione dell'utente, Cohesion effettua una chiamata <strong>POST</strong> all'indirizzo specificato in <strong>url_validate</strong> nel cui body verrà specificato un token di autenticazione. 
 Nel body ci sarà un elemento <em>auth</em> codificato in base64 e URL Encoded che conterrà un XML di questo tipo:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
@@ -1014,7 +1068,7 @@ Per ottenere gli attributi completi, è necessario effettuare una chiamata GET o
 
 <p>Gli attributi dell'utente sono contenuti nell'oggetto <em>Object</em>. Gli attributi restituiti possono variare in base all'Identity Provider, al livello di autenticazione e dalle impostazioni dell'utente.</p>
 <p><strong>NOTA BENE</strong>: <em>Object</em> contiene anche il token SAML in <code>samlResponseBase64</code> il cui valore è quello della <em>SAMLResponse</em> originale restituita dall'Identity Provider scelto dall'utente.</p>
-<h1 id="come-effettuare-il-logout">Come effettuare il logout?<a class="headerlink" href="#come-effettuare-il-logout" title="Permanent link">&para;</a></h1>
+<h2 id="come-effettuare-il-logout"><strong>Come effettuare il logout?</strong><a class="headerlink" href="#come-effettuare-il-logout" title="Permanent link">&para;</a></h2>
 <p>Per effettuare il <em>logout</em> basterà semplicemente chiamare lo stesso endpoint utilizzato per ottenere gli attributi dell'utente andando a modificare il parametro <strong>Operation</strong> e specificando <em>LogoutSito</em> invece di <em>GetCredential</em></p>
 <p>Nel nostro esempio</p>
 <div class="codehilite"><pre><span></span><code>https://cohesion2.regione.marche.it/SPManager/webCheckSessionSSO.aspx?Operation=LogoutSito<span class="ni">&amp;IdSessioneSSO=A5D64899EBCEE1FA6B3E8FB3D3D358D7E5843EA25EDFD62277CACE8A5EF23B1C5E6FAB916F333B0AFB0FAE6C4CDF7B8E8DEE461E8661DB04F5FFB01BC0EF9FCB90EEA2ACA7988119EFE17D5C3BB58BC890D75D724D434D7D60C2F451F6A51D1DFFA900EF0AAA631A51458860C6CEC7B1EBC525561624208066DF276314F41F6EC258CA3F&amp;IdSessioneASPNET=ufrq00x4f0cq2yog2ozv4lxx;</span>https://idp.namirialtsp.com/idp;https://q-marche.turitweb.it/LogOff;AAdzZWNyZXQxGLSQhZFb4TSPKKPNCGfO5MaCcJ99DiuEnIzpO4YvtOrgf+6qvwyEVOguFDCVbyPcZ2hhjbBtPtuCWUGs+FYX9zREfvZ1heshK7yzE24MU7JsIBK17atMdbL31QbDPNKbH2wiswXhL2CJGjY=;AAdzZWNyZXQxGLSQhZFb4TSPKKPNCGfO5MaCcJ99DiuEnIzpO4YvtOrgf+6qvwyEVOguFDCVbyPcZ2hhjbBtPtuCWUGs+FYX9zREfvZ1heshK7yzE24MU7JsIBK17atMdbL31QbDPNKbH2wiswXhL2CJGjY=;
