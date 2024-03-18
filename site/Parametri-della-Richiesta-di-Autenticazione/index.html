@@ -993,37 +993,37 @@ https://cohesion2.regione.marche.it/testcohesion/Index.aspx;UType=d;purpose=PG|P
 <p>3= Accesso con Dominio Active Directory REGIONEMARCHE</p>
 <p>Ad esempio, impostando il parametro come
 <code>AuthRestriction=3,2,1</code> stabiliamo che l'accesso sarà consentito ad utenze che dispongono di credenziali SPID di Livello 2 e 3, nonché tramite Dominio, ma non sarà possibile utilizzare credenziali SPID di primo livello.</p>
-<h2 id="url-di-reindirizzamento">URL di reindirizzamento<a class="headerlink" href="#url-di-reindirizzamento" title="Permanent link">&para;</a></h2>
+<h2 id="url-di-reindirizzamento"><strong>URL di reindirizzamento</strong><a class="headerlink" href="#url-di-reindirizzamento" title="Permanent link">&para;</a></h2>
 <p>L'URL al quale l'utente sarà reindirizzato dopo aver effettuato l'autenticazione.</p>
-<h2 id="utype"><code>UType</code><a class="headerlink" href="#utype" title="Permanent link">&para;</a></h2>
+<h2 id="utype"><strong><code>UType</code></strong><a class="headerlink" href="#utype" title="Permanent link">&para;</a></h2>
 <p>Specifica la tipologia di utente che accede tramite Cohesion. Si distinguono 3 differenti tipologie:</p>
 <p><code>UType=c</code> = Accesso per soli cittadini, l'autenticazione tramite credenziali Cohesion è disabilitata</p>
 <p><code>UType=d</code> = Accesso per soli Dipendenti della PA, viene abilitata l'autenticazione tramite credenziali Cohesion</p>
 <p><code>UType=cd</code> = Accesso per Dipendenti delle PA e Cittadini, l'autenticazione tramite credenziali Cohesion è abilitata (opzione di default)</p>
 <p>Ad esempio, impostando il parametro come segue <code>UType=c</code> stabiliamo che l'unica tipologia di utenza accettabile è il cittadino, disabilitando l'accesso tramite credenziali Cohesion</p>
-<h2 id="purpose"><code>purpose</code><a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<h2 id="purpose"><strong><code>purpose</code></strong><a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
 <p>Definisce il livello di sicurezza SPID in base alla tipologia (o scopo) dell'utente. Si distinguono in:</p>
 <p>PF = SPID personale per Persona Fisica, costituisce l'identità di un cittadino che accede ai servizi della PA</p>
 <p>LP = SPID del Libero Professionista, racchiude i dati i dati della persona fisica ed eventuali attributi che caratterizzano la sua professione.</p>
 <p>PG = SPID Giuridico, rilasciata ad una persona fisica a cui vengono associati anche i dati della persona giuridica per cui opera.</p>
 <p>Ad esempio, impostando il parametro come <code>purpose=PG</code> Cohesion consentirà l'accesso solamente alle persone dotate di SPID Giuridico.</p>
 <p>Per la lista completa dei gestori di Identità Digitali che supportano le tipologie PG e LP, si prega di consultare il seguente link: https://www.agid.gov.it/it/piattaforme/spid</p>
-<h2 id="aggregato"><code>aggregato</code><a class="headerlink" href="#aggregato" title="Permanent link">&para;</a></h2>
+<h2 id="aggregato"><strong><code>aggregato</code></strong><a class="headerlink" href="#aggregato" title="Permanent link">&para;</a></h2>
 <p>Se l'ente è federato in modalità aggregata, sarà necessario inserire il parametro <code>aggregato=1</code></p>
 <p>Se non specificato, verrà utilizzata la modalità di default diretta</p>
-<h2 id="eidas"><code>eidas</code><a class="headerlink" href="#eidas" title="Permanent link">&para;</a></h2>
+<h2 id="eidas"><strong><code>eidas</code></strong><a class="headerlink" href="#eidas" title="Permanent link">&para;</a></h2>
 <p>Abilita il login tramite il nodo italiano eIDAS specificando se, a valle dell'autenticazione, è necessaria la verifica del Codice Fiscale:</p>
 <p><code>eidas=1</code> = Autenticazione eidas abilitata, nessuna verifica del Codice Fiscale.</p>
 <p><code>eidas=2</code> = Verifica semplice del Codice Fiscale.</p>
 <p><code>eidas=3</code> = Verifica del Codice Fiscale con supporto fisico.</p>
 <p>Ad esempio, impostando il parametro come <code>eidas=3</code> sarà necessaria la verifica del Codice Fiscale tramite supporto, escludendo i livelli di autenticazione più bassi.</p>
-<h2 id="spidmode"><code>SpidMode</code><a class="headerlink" href="#spidmode" title="Permanent link">&para;</a></h2>
+<h2 id="spidmode"><strong><code>SpidMode</code></strong><a class="headerlink" href="#spidmode" title="Permanent link">&para;</a></h2>
 <p>Definisce il protocollo di autenticazione che CohesionID deve utilizzare per comunicare con la piattaforma nazionale SPID. </p>
 <p>Se non specificato, verrà utilizzato il protocollo di default SAML. Impostando il parametro come <code>SpidMode=OIDC</code> verrà utilizzato il nuovo protocollo OpenID Connect </p>
-<h2 id="ciemode"><code>CieMode</code><a class="headerlink" href="#ciemode" title="Permanent link">&para;</a></h2>
+<h2 id="ciemode"><strong><code>CieMode</code></strong><a class="headerlink" href="#ciemode" title="Permanent link">&para;</a></h2>
 <p>Definisce il protocollo di autenticazione che CohesionID deve utilizzare per comunicare con la piattaforma nazionale CIE. </p>
 <p>Se non specificato, verrà utilizzato il protocollo di default SAML mentre, impostando il parametro come <code>CieMode=OIDC</code>, verrà utilizzato il nuovo protocollo OpenID Connect </p>
-<h2 id="ipa"><code>IPA</code><a class="headerlink" href="#ipa" title="Permanent link">&para;</a></h2>
+<h2 id="ipa"><strong><code>IPA</code></strong><a class="headerlink" href="#ipa" title="Permanent link">&para;</a></h2>
 <p>L'IPA è l'Indice delle Pubbliche Amministrazioni, univoco ad ogni ente della Pubblica Amministrazione. </p>
 <p>Specificando questo parametro, CohesionID effettuerà la richiesta di autenticazione verso le piattaforme nazionali ed europee per conto dell'ente aggregato specificato.</p>
 
