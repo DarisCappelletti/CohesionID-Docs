@@ -1,5 +1,5 @@
-# **Flusso di Autenticazione**
-## **1. L'utente richiede di effettuare il login ** 
+# **Flusso di Autenticazione** 
+## **1. L'utente richiede di effettuare il login** 
 
 L'utente desidera effettuare l'accesso ad un'applicazione che integra il sistema Cohesion, cliccando sul _login_ viene reindirizzato al sistema Cohesion ID.
 
