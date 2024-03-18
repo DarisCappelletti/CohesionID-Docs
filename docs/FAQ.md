@@ -1,6 +1,6 @@
 # FAQ (Frequently Asked Questions)
 
-## Che cos'è Cohesion ID?
+## **Che cos'è Cohesion ID?**
 Cohesion ID è un framework di autenticazione progettato per verificare l'identità degli utenti (persone fisiche con codice fiscale) che accedono ai servizi digitali della Regione Marche o degli Enti convenzionati.
 
 
