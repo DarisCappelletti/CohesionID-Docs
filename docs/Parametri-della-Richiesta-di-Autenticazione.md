@@ -1,4 +1,4 @@
-# Parametri della Richiesta di Autenticazione
+# **Parametri della Richiesta di Autenticazione**
 In questa sezione definiamo in dettaglio i parametri di autenticazione presenti nel tag `stilesheet` della Richiesta di Autenticazione effettuata da Cohesion.
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -25,7 +25,7 @@ https://cohesion2.regione.marche.it/testcohesion/Index.aspx;UType=d;purpose=PG|P
 
 ```
 
-## `AuthRestriction`
+## **`AuthRestriction`**
 Il parametro `AuthRestriction` stabilisce il livello di autenticazione minimo richiesto associandolo a un valore numerico (0,1,2,3). Nello specifico:
 
 0= Accesso solo con password - SPID Livello 1
