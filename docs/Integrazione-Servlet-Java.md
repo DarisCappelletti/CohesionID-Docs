@@ -1,4 +1,4 @@
-# Integrazione mediante servlet Java
+# **Integrazione mediante servlet Java**
 
 Con il presente si vuole fornire una panoramica completa delle modalità di integrazione e delle configurazioni di utilizzo del Service Provider fornito con Cohesion in applicativi web che richiedono autenticazione e profilazione utente.
 Verrà in dettaglio descritta la procedura di installazione in ambiente Java Servlet e la configurazione per l’utilizzo classico ed il funzionamento in modalità federata SAML2.0.
@@ -13,7 +13,7 @@ Verrà in dettaglio descritta la procedura di installazione in ambiente Java Ser
 ***
 
 
-**Prerequisiti**:
+## **Prerequisiti**:
 
 * Apache Tomcat v6+, JBoss, Glassfish
 * Java v 1.6+
@@ -70,7 +70,9 @@ Il comando è presente nella cartella bin di Java e restituirà un output simile
 Il primo valore terminato dalla virgola è l'alias da inserire.
 
 **b) Parametri relativi al token utente restituito**
+
 Questi parametri sono opzionali e relativi solo all'invio del token tra la servlet e la pagina di login:
+
 * **encryptionKey**:Questo parametro è opzionale. Se impostato deve avere una lunghezza fissa di 24 caratteri e permetterà di restituire alla pagina di login il token utente crittografato usando l’algoritmo 3-DES/ECB/NoPadding. Il token sarà perciò prima firmato, poi crittografato ed infine convertito in base64 e inviato in POST alla pagina di login. L’utilizzo della cifratura del token è necessario qualora si utilizzi una pagina di login non protetta da connessione sicura https. Qualora la connessione sia in https è sufficiente la firma del token per garantire un livello sicurezza elevato.
 * **urlRichiesta**: Questo valore va impostato solo nel caso si scelga di non inviare il parametro ReturnUrl durante la chiamata alla servlet di autenticazione per mezzo della pagina di login. In tal caso la servlet restituirà il token utente in **POST** alla pagina specificata in **urlRichiesta**, altrimenti sarà restituito alla pagina specificata in **ReturnUrl**.
 * **urlIndex**: pagina iniziale a cui reindirizzare in caso di errore. Se non viene specificata viene mostrato l'errore nella pagina in cui si presenta.
@@ -109,7 +111,7 @@ Esempio (Produzione):
 ```
 https://cohesion2.regione.marche.it/SPManager/WAYF.aspx?entityID=cohesion2.regione.marche.it:idp
 ```
-### Parametro id_sito
+### **Parametro id_sito**
 
 In caso per l'integrazione sia necessario impostare un IDSito col valore fornito da Regione Marche in fase di abilitazione all'uso di cohesion, il valore va sostituito nella classe contenuta nel WAR Java
 ```java
@@ -124,7 +126,7 @@ WEB-INF\classes\it\unicam\cs\cohesion\servlet\LogoutServlet.java
 
 riga 22 [private String idsito = "TEST";]
 
-### Rinnovo asserzione SAML
+### **Rinnovo asserzione SAML**
 
 Una volta autenticati, la sessione per il Single Sign On sarà valida per 60 minuti. Nella modalità SAML questo tempo sarà anche specificato nella risposta SAML ritornata dall’IdP. Entro tale tempo sarà possibile accedere a qualunque sito protetto da Cohesion senza che appaia la maschera di autenticazione. Il Service Provider in tal caso otterrà un nuovo token (contenente anche una nuova asserzione SAML in caso di modalità SAML) ed un rinnovamento del cookie di sessione per altri 60 minuti.
 
