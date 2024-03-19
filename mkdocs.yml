@@ -55,6 +55,7 @@ nav:
         - Integrazione .NET Core 8: https://github.com/regione-marche/Cohesion2NETCore8Library
         - Integrazione C#: Integrazione-Classe-C-Sharp.md
         - Integrazione C# Core: Integrazione-C-Sharp-Core.md
+        - Integrazione Java: Integrazione-Servlet-Java.md
         - Integrazione PHP: https://github.com/regione-marche/Cohesion2PHPLibrary
         - Integrazione Phyton: https://github.com/regione-marche/Cohesion2PythonIntegrationTest
         - Rinnovo del Token: Rinnovo-del-Token.md
